@@ -31,7 +31,7 @@ contract WeatherGame is Ownable {
         kittyIdToMetadata[id] = Metadata("", now);
     }
 
-    function updateWeather(uint256 id, bytes32 data) public onlyOwner {
+    function updateWeather(uint256 id, bytes32 data) public {
         kittyIdToMetadata[id] = Metadata(data, now);
     }
 
